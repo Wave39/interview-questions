@@ -13,7 +13,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         FFProcessor *ffProcessor = [[FFProcessor alloc] init];
-        NSArray *arr = [ffProcessor validWords:@"hi"];
+        NSArray *arr = [ffProcessor validWords:@"gi"];
         NSLog(@"Valid words: %@", arr);
     }
 

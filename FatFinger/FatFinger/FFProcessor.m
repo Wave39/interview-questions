@@ -19,13 +19,13 @@
 
 - (NSArray *)validSubstitutions:(NSString *)originalCharacter
 {
-    if ([originalCharacter isEqualToString:@"h"])
+    if ([originalCharacter isEqualToString:@"g"])
     {
-        return @ [ @"g", @"h", @"j" ];
+        return @ [ @"g", @"h", @"f" ];
     }
     else if ([originalCharacter isEqualToString:@"i"])
     {
-        return @ [ @"k", @"i", @"o" ];
+        return @ [ @"i", @"o", @"k" ];
     }
     
     return nil;
