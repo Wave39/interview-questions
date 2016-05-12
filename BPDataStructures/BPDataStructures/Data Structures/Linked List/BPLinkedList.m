@@ -79,4 +79,30 @@
     return node.nodeContents;
 }
 
+- (void)removeObjectAtIndex:(NSInteger)idx
+{
+    if (idx == 0)
+    {
+        _firstNode = _firstNode.nextNode;
+        return;
+    }
+    
+    BPLinkedListNode *node = _firstNode;
+    NSInteger counter = 0;
+    while (counter < idx - 1)
+    {
+        node = node.nextNode;
+        counter++;
+    }
+    
+    node.nextNode = node.nextNode.nextNode;
+}
+
+// TODO: potential methods to add...
+// add all nodes of another linked list
+// insert at a specified index
+// get first/last object
+// get index of specified object
+// remove object by contents
+
 @end

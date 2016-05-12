@@ -57,4 +57,21 @@
     XCTAssert([[_linkedList objectAtIndex:3] isEqualToString:@"4444"]);
 }
 
+- (void)testRemoveObjectAtIndex {
+    [_linkedList add:@"1"];
+    [_linkedList add:@"22"];
+    [_linkedList add:@"333"];
+    [_linkedList add:@"4444"];
+    [_linkedList add:@"55555"];
+    
+    [_linkedList removeObjectAtIndex:2];
+    XCTAssert([[_linkedList objectAtIndex:3] isEqualToString:@"55555"]);
+    
+    [_linkedList removeObjectAtIndex:0];
+    XCTAssert([[_linkedList objectAtIndex:0] isEqualToString:@"22"]);
+
+    [_linkedList removeObjectAtIndex:2];
+    XCTAssert([_linkedList length] == 2);
+}
+
 @end

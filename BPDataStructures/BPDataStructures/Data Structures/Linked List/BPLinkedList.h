@@ -18,5 +18,6 @@
 - (void)add:(id)objectToAdd;
 - (void)clear;
 - (id)objectAtIndex:(NSInteger)idx;
+- (void)removeObjectAtIndex:(NSInteger)idx;
 
 @end
