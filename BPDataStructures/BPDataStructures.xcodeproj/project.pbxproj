@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E03806551CEBA3310056FD26 /* BPTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E03806541CEBA3310056FD26 /* BPTreeNode.m */; };
+		E03806561CEBA3310056FD26 /* BPTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E03806541CEBA3310056FD26 /* BPTreeNode.m */; };
+		E03806591CEBA3420056FD26 /* BPTree.m in Sources */ = {isa = PBXBuildFile; fileRef = E03806581CEBA3420056FD26 /* BPTree.m */; };
+		E038065A1CEBA3420056FD26 /* BPTree.m in Sources */ = {isa = PBXBuildFile; fileRef = E03806581CEBA3420056FD26 /* BPTree.m */; };
+		E038065C1CEBA43D0056FD26 /* Test_BPTree.m in Sources */ = {isa = PBXBuildFile; fileRef = E038065B1CEBA43D0056FD26 /* Test_BPTree.m */; };
 		E0FEFB841CE4F542007DD565 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FEFB831CE4F542007DD565 /* AppDelegate.m */; };
 		E0FEFB871CE4F542007DD565 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FEFB861CE4F542007DD565 /* main.m */; };
 		E0FEFB891CE4F542007DD565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0FEFB881CE4F542007DD565 /* Assets.xcassets */; };
@@ -29,6 +34,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E03806531CEBA3310056FD26 /* BPTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTreeNode.h; sourceTree = "<group>"; };
+		E03806541CEBA3310056FD26 /* BPTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTreeNode.m; sourceTree = "<group>"; };
+		E03806571CEBA3420056FD26 /* BPTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTree.h; sourceTree = "<group>"; };
+		E03806581CEBA3420056FD26 /* BPTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTree.m; sourceTree = "<group>"; };
+		E038065B1CEBA43D0056FD26 /* Test_BPTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test_BPTree.m; sourceTree = "<group>"; };
 		E0FEFB7F1CE4F542007DD565 /* BPDataStructures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BPDataStructures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0FEFB821CE4F542007DD565 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E0FEFB831CE4F542007DD565 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +73,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E03806521CEBA3120056FD26 /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				E03806531CEBA3310056FD26 /* BPTreeNode.h */,
+				E03806541CEBA3310056FD26 /* BPTreeNode.m */,
+				E03806571CEBA3420056FD26 /* BPTree.h */,
+				E03806581CEBA3420056FD26 /* BPTree.m */,
+			);
+			path = Tree;
+			sourceTree = "<group>";
+		};
 		E0FEFB761CE4F542007DD565 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +129,7 @@
 			children = (
 				E0FEFB981CE4F542007DD565 /* Info.plist */,
 				E0FEFBA61CE4F5F2007DD565 /* Test_BPLinkedList.m */,
+				E038065B1CEBA43D0056FD26 /* Test_BPTree.m */,
 			);
 			path = BPDataStructuresTests;
 			sourceTree = "<group>";
@@ -116,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				E0FEFBAC1CE50DEF007DD565 /* Linked List */,
+				E03806521CEBA3120056FD26 /* Tree */,
 			);
 			path = "Data Structures";
 			sourceTree = "<group>";
@@ -233,7 +256,9 @@
 				E0FEFBAA1CE4F6CE007DD565 /* BPLinkedListNode.m in Sources */,
 				E0FEFB871CE4F542007DD565 /* main.m in Sources */,
 				E0FEFB841CE4F542007DD565 /* AppDelegate.m in Sources */,
+				E03806551CEBA3310056FD26 /* BPTreeNode.m in Sources */,
 				E0FEFBA41CE4F5C5007DD565 /* BPLinkedList.m in Sources */,
+				E03806591CEBA3420056FD26 /* BPTree.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,9 +266,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E038065A1CEBA3420056FD26 /* BPTree.m in Sources */,
 				E0FEFBA71CE4F5F2007DD565 /* Test_BPLinkedList.m in Sources */,
 				E0FEFBA51CE4F5C5007DD565 /* BPLinkedList.m in Sources */,
 				E0FEFBAB1CE4F6CE007DD565 /* BPLinkedListNode.m in Sources */,
+				E03806561CEBA3310056FD26 /* BPTreeNode.m in Sources */,
+				E038065C1CEBA43D0056FD26 /* Test_BPTree.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +447,7 @@
 				E0FEFB9D1CE4F542007DD565 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E0FEFB9E1CE4F542007DD565 /* Build configuration list for PBXNativeTarget "BPDataStructuresTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +456,7 @@
 				E0FEFBA01CE4F542007DD565 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

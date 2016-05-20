@@ -8,16 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@class BPLinkedListNode;
-
 @interface BPLinkedList : NSObject
-
-@property (nonatomic, strong) BPLinkedListNode *firstNode;
 
 - (NSInteger)length;
 - (void)add:(id)objectToAdd;
 - (void)clear;
 - (id)objectAtIndex:(NSInteger)idx;
 - (void)removeObjectAtIndex:(NSInteger)idx;
+- (void)addObjectsFromLinkedList:(BPLinkedList *)linkedList;
+- (id)firstObject;
+- (id)lastObject;
+- (void)insertObject:(id)object atIndex:(NSInteger)idx;
+- (NSInteger)indexOfObject:(id)object;
+- (BOOL)removeObject:(id)object;
 
 @end
