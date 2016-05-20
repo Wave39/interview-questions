@@ -10,4 +10,24 @@
 
 @implementation BPTreeNode
 
+- (instancetype)initWithNodeContents:(id)contents
+{
+    return [self initWithNodeContents:contents andBranches:nil];
+}
+
+- (instancetype)initWithNodeContents:(id)contents andBranches:(NSArray <BPTreeNode *> *)branches
+{
+    self = [super init];
+    if (self)
+    {
+        self.nodeContents = contents;
+        if (branches != nil)
+        {
+            self.branches = [NSMutableArray arrayWithArray:branches];
+        }
+    }
+    
+    return self;
+}
+
 @end

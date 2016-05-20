@@ -23,8 +23,11 @@
     [super setUp];
 
     self.tree = [[BPTree alloc] init];
-    BPTreeNode *node1 = [[BPTreeNode alloc] init];
-    node1.nodeContents = @"1";
+    
+    BPTreeNode *node2a = [[BPTreeNode alloc] initWithNodeContents:@"2a"];
+    BPTreeNode *node2b = [[BPTreeNode alloc] initWithNodeContents:@"2b"];
+    
+    BPTreeNode *node1 = [[BPTreeNode alloc] initWithNodeContents:@"1" andBranches:@ [ node2a, node2b ]];
     [_tree setRootNode:node1];
 }
 
@@ -35,6 +38,8 @@
 
 - (void)testDummy {
     XCTAssert([_tree rootNode] != nil);
+    XCTAssert([_tree.rootNode.nodeContents isEqualTo:@"1"]);
+    XCTAssert(_tree.rootNode.branches.count == 2);
 }
 
 @end

@@ -13,4 +13,7 @@
 @property (nonatomic, copy) id nodeContents;
 @property (nonatomic, strong) NSMutableArray *branches;
 
+- (instancetype)initWithNodeContents:(id)contents;
+- (instancetype)initWithNodeContents:(id)contents andBranches:(NSArray <BPTreeNode *> *)branches;
+
 @end
