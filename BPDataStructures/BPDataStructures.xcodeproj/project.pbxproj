@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E037BFF7233998D900166BD8 /* BPQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E037BFF6233998D900166BD8 /* BPQueue.m */; };
+		E037BFF8233998D900166BD8 /* BPQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E037BFF6233998D900166BD8 /* BPQueue.m */; };
+		E037BFFA233999B000166BD8 /* Test_BPQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E037BFF9233999B000166BD8 /* Test_BPQueue.m */; };
 		E03806551CEBA3310056FD26 /* BPTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E03806541CEBA3310056FD26 /* BPTreeNode.m */; };
 		E03806561CEBA3310056FD26 /* BPTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E03806541CEBA3310056FD26 /* BPTreeNode.m */; };
 		E03806591CEBA3420056FD26 /* BPTree.m in Sources */ = {isa = PBXBuildFile; fileRef = E03806581CEBA3420056FD26 /* BPTree.m */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E037BFF5233998D900166BD8 /* BPQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPQueue.h; sourceTree = "<group>"; };
+		E037BFF6233998D900166BD8 /* BPQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPQueue.m; sourceTree = "<group>"; };
+		E037BFF9233999B000166BD8 /* Test_BPQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test_BPQueue.m; sourceTree = "<group>"; };
 		E03806531CEBA3310056FD26 /* BPTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTreeNode.h; sourceTree = "<group>"; };
 		E03806541CEBA3310056FD26 /* BPTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTreeNode.m; sourceTree = "<group>"; };
 		E03806571CEBA3420056FD26 /* BPTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTree.h; sourceTree = "<group>"; };
@@ -73,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E037BFF4233998A900166BD8 /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+				E037BFF5233998D900166BD8 /* BPQueue.h */,
+				E037BFF6233998D900166BD8 /* BPQueue.m */,
+			);
+			path = Queue;
+			sourceTree = "<group>";
+		};
 		E03806521CEBA3120056FD26 /* Tree */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +144,7 @@
 			children = (
 				E0FEFB981CE4F542007DD565 /* Info.plist */,
 				E0FEFBA61CE4F5F2007DD565 /* Test_BPLinkedList.m */,
+				E037BFF9233999B000166BD8 /* Test_BPQueue.m */,
 				E038065B1CEBA43D0056FD26 /* Test_BPTree.m */,
 			);
 			path = BPDataStructuresTests;
@@ -138,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				E0FEFBAC1CE50DEF007DD565 /* Linked List */,
+				E037BFF4233998A900166BD8 /* Queue */,
 				E03806521CEBA3120056FD26 /* Tree */,
 			);
 			path = "Data Structures";
@@ -253,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E037BFF7233998D900166BD8 /* BPQueue.m in Sources */,
 				E0FEFBAA1CE4F6CE007DD565 /* BPLinkedListNode.m in Sources */,
 				E0FEFB871CE4F542007DD565 /* main.m in Sources */,
 				E0FEFB841CE4F542007DD565 /* AppDelegate.m in Sources */,
@@ -266,12 +284,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E037BFF8233998D900166BD8 /* BPQueue.m in Sources */,
 				E038065A1CEBA3420056FD26 /* BPTree.m in Sources */,
 				E0FEFBA71CE4F5F2007DD565 /* Test_BPLinkedList.m in Sources */,
 				E0FEFBA51CE4F5C5007DD565 /* BPLinkedList.m in Sources */,
 				E0FEFBAB1CE4F6CE007DD565 /* BPLinkedListNode.m in Sources */,
 				E03806561CEBA3310056FD26 /* BPTreeNode.m in Sources */,
 				E038065C1CEBA43D0056FD26 /* Test_BPTree.m in Sources */,
+				E037BFFA233999B000166BD8 /* Test_BPQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
