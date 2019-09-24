@@ -36,7 +36,7 @@
     [super tearDown];
 }
 
-- (void)testDummy {
+- (void)testTree {
     XCTAssert([_tree rootNode] != nil);
     XCTAssert([_tree.rootNode.nodeContents isEqualTo:@"1"]);
     XCTAssert(_tree.rootNode.branches.count == 2);
