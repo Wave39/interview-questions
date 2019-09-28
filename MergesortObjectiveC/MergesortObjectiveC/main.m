@@ -19,9 +19,11 @@ void PerformSort(NSArray *numbers)
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         PerformSort(@[ @1, @3, @2, @6 ]);
+        PerformSort(@[ @5, @1, @3, @2, @6 ]);
         PerformSort(@[ @7 ]);
         PerformSort(@[ ]);
         PerformSort(@[ @6, @5, @3, @1, @8, @7, @2, @4 ]);
+        PerformSort(@[ @6, @5, @9, @3, @1, @8, @7, @2, @4 ]);
     }
     
     NSLog(@"Strike the Enter key to finish...");
