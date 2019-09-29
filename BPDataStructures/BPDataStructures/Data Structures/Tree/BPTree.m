@@ -18,15 +18,20 @@
 
 @implementation BPTree
 
-- (instancetype)init
+- (instancetype)initWithRootNode:(BPTreeNode *)root
 {
     self = [super init];
     if (self)
     {
-        self.rootNode = nil;
+        self.rootNode = root;
     }
     
     return self;
+}
+
+- (instancetype)init
+{
+    return [self initWithRootNode:nil];
 }
 
 - (BPTreeNode *)rootNode

@@ -12,6 +12,7 @@
 
 @interface BPTree : NSObject
 
+- (instancetype)initWithRootNode:(BPTreeNode *)root;
 - (BPTreeNode *)rootNode;
 - (void)setRootNode:(BPTreeNode *)node;
 
