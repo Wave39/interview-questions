@@ -27,3 +27,8 @@ To run this application, you would change directory to the path where the execut
 ```
 ./Root-Evaluation /Path/To/Input/File.txt
 ```
+
+## Unit tests
+
+There is a unit test target added to this project that you can run to check default functionality and edge cases.
+Each class has its own test class that exercises code in that class.
