@@ -11,6 +11,10 @@
 		7B39880E2365E07D000FD403 /* DriverInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B39880D2365E07D000FD403 /* DriverInfo.m */; };
 		7B3988112365E144000FD403 /* TripInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3988102365E144000FD403 /* TripInfo.m */; };
 		7B3988142365E160000FD403 /* DriverHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3988132365E160000FD403 /* DriverHistory.m */; };
+		7B6AFACE2366373000C2FCF3 /* DriverInfoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AFACD2366373000C2FCF3 /* DriverInfoTests.m */; };
+		7B6AFACF2366384800C2FCF3 /* DriverInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B39880D2365E07D000FD403 /* DriverInfo.m */; };
+		7B6AFAD02366384B00C2FCF3 /* TripInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3988102365E144000FD403 /* TripInfo.m */; };
+		7B6AFAD12366384D00C2FCF3 /* DriverHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3988132365E160000FD403 /* DriverHistory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,10 +38,20 @@
 		7B3988102365E144000FD403 /* TripInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TripInfo.m; sourceTree = "<group>"; };
 		7B3988122365E160000FD403 /* DriverHistory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DriverHistory.h; sourceTree = "<group>"; };
 		7B3988132365E160000FD403 /* DriverHistory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DriverHistory.m; sourceTree = "<group>"; };
+		7B430AA4236635DA003628F1 /* Root-Evaluation-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Root-Evaluation-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B430AA8236635DA003628F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B6AFACD2366373000C2FCF3 /* DriverInfoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DriverInfoTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7B3987FD2365D9F9000FD403 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B430AA1236635DA003628F1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -51,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				7B3988022365D9F9000FD403 /* Root-Evaluation */,
+				7B430AA5236635DA003628F1 /* Root-Evaluation-Tests */,
 				7B3988012365D9F9000FD403 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				7B3988002365D9F9000FD403 /* Root-Evaluation */,
+				7B430AA4236635DA003628F1 /* Root-Evaluation-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,6 +101,15 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		7B430AA5236635DA003628F1 /* Root-Evaluation-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7B430AA8236635DA003628F1 /* Info.plist */,
+				7B6AFACD2366373000C2FCF3 /* DriverInfoTests.m */,
+			);
+			path = "Root-Evaluation-Tests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,6 +130,23 @@
 			productReference = 7B3988002365D9F9000FD403 /* Root-Evaluation */;
 			productType = "com.apple.product-type.tool";
 		};
+		7B430AA3236635DA003628F1 /* Root-Evaluation-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B430AAB236635DA003628F1 /* Build configuration list for PBXNativeTarget "Root-Evaluation-Tests" */;
+			buildPhases = (
+				7B430AA0236635DA003628F1 /* Sources */,
+				7B430AA1236635DA003628F1 /* Frameworks */,
+				7B430AA2236635DA003628F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Root-Evaluation-Tests";
+			productName = "Root-Evaluation-Tests";
+			productReference = 7B430AA4236635DA003628F1 /* Root-Evaluation-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -115,6 +157,9 @@
 				ORGANIZATIONNAME = "Brian Prescott";
 				TargetAttributes = {
 					7B3987FF2365D9F9000FD403 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					7B430AA3236635DA003628F1 = {
 						CreatedOnToolsVersion = 11.1;
 					};
 				};
@@ -133,9 +178,20 @@
 			projectRoot = "";
 			targets = (
 				7B3987FF2365D9F9000FD403 /* Root-Evaluation */,
+				7B430AA3236635DA003628F1 /* Root-Evaluation-Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B430AA2236635DA003628F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7B3987FC2365D9F9000FD403 /* Sources */ = {
@@ -146,6 +202,17 @@
 				7B3988042365D9F9000FD403 /* main.m in Sources */,
 				7B39880E2365E07D000FD403 /* DriverInfo.m in Sources */,
 				7B3988112365E144000FD403 /* TripInfo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B430AA0236635DA003628F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B6AFAD02366384B00C2FCF3 /* TripInfo.m in Sources */,
+				7B6AFACF2366384800C2FCF3 /* DriverInfo.m in Sources */,
+				7B6AFACE2366373000C2FCF3 /* DriverInfoTests.m in Sources */,
+				7B6AFAD12366384D00C2FCF3 /* DriverHistory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +348,40 @@
 			};
 			name = Release;
 		};
+		7B430AA9236635DA003628F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = D9KUNWHAM5;
+				INFOPLIST_FILE = "Root-Evaluation-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wave39.Root-Evaluation-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7B430AAA236635DA003628F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = D9KUNWHAM5;
+				INFOPLIST_FILE = "Root-Evaluation-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wave39.Root-Evaluation-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -298,6 +399,15 @@
 			buildConfigurations = (
 				7B3988082365D9F9000FD403 /* Debug */,
 				7B3988092365D9F9000FD403 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B430AAB236635DA003628F1 /* Build configuration list for PBXNativeTarget "Root-Evaluation-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B430AA9236635DA003628F1 /* Debug */,
+				7B430AAA236635DA003628F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

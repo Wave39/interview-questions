@@ -25,6 +25,7 @@ int main(int argc, const char * argv[]) {
         DriverHistory *driverHistory = [DriverHistory parseFromFile:filename];
         if (driverHistory == nil)
         {
+            NSLog(@"Driver history was empty");
             return 2;
         }
         
