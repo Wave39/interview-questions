@@ -20,6 +20,16 @@
     return self;
 }
 
+- (void)addTripInfo:(TripInfo *)tripInfo
+{
+    DriverInfo *driver = self.driverDictionary[tripInfo.name];
+    if (driver != nil)
+    {
+        driver.minutesDriven += tripInfo.minutesDriven;
+        driver.milesDriven += tripInfo.milesDriven;
+    }
+}
+
 + (DriverHistory *)parseFromFile:(NSString *)filename
 {
     DriverHistory *driverHistory = [[DriverHistory alloc] init];
@@ -62,16 +72,7 @@
                     TripInfo *tripInfo = [[TripInfo alloc] initByParsingData:line];
                     if (tripInfo != nil)
                     {
-                        DriverInfo *driver = driverHistory.driverDictionary[driverName];
-                        if (driver == nil)
-                        {
-                            NSLog(@"A driver was used in a Trip command before they had a Driver command at line number %@: %@", @(lineNumber), line);
-                        }
-                        else
-                        {
-                            driver.minutesDriven += tripInfo.minutesDriven;
-                            driver.milesDriven += tripInfo.milesDriven;
-                        }
+                        [driverHistory addTripInfo:tripInfo];
                     }
                 }
                 else
@@ -86,12 +87,16 @@
     return driverHistory;
 }
 
-- (void)outputSortedList
+- (NSArray *)arraySortedByMilesDriven
 {
-    NSArray *driverArray = [[self.driverDictionary allValues] sortedArrayUsingComparator:^NSComparisonResult(DriverInfo *a, DriverInfo *b) {
+    return [[self.driverDictionary allValues] sortedArrayUsingComparator:^NSComparisonResult(DriverInfo *a, DriverInfo *b) {
         return a.milesDriven < b.milesDriven;
     }];
-    
+}
+
+- (void)outputSortedList
+{
+    NSArray *driverArray = [self arraySortedByMilesDriven];
     for (DriverInfo *driver in driverArray) {
         NSLog(@"%@", [driver consoleOutput]);
     }

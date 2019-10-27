@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSMutableDictionary *driverDictionary;
 
 + (DriverHistory *)parseFromFile:(NSString *)filename;
+- (NSArray *)arraySortedByMilesDriven;
 - (void)outputSortedList;
 
 @end

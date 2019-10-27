@@ -16,6 +16,7 @@
 		7B6AFAD02366384B00C2FCF3 /* TripInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3988102365E144000FD403 /* TripInfo.m */; };
 		7B6AFAD12366384D00C2FCF3 /* DriverHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3988132365E160000FD403 /* DriverHistory.m */; };
 		7B6AFAD3236639C400C2FCF3 /* TripInfoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AFAD2236639C400C2FCF3 /* TripInfoTests.m */; };
+		7B6AFAD523663BF800C2FCF3 /* DriverHistoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6AFAD423663BF800C2FCF3 /* DriverHistoryTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,7 @@
 		7B430AA8236635DA003628F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B6AFACD2366373000C2FCF3 /* DriverInfoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DriverInfoTests.m; sourceTree = "<group>"; };
 		7B6AFAD2236639C400C2FCF3 /* TripInfoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TripInfoTests.m; sourceTree = "<group>"; };
+		7B6AFAD423663BF800C2FCF3 /* DriverHistoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DriverHistoryTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				7B430AA8236635DA003628F1 /* Info.plist */,
 				7B6AFACD2366373000C2FCF3 /* DriverInfoTests.m */,
 				7B6AFAD2236639C400C2FCF3 /* TripInfoTests.m */,
+				7B6AFAD423663BF800C2FCF3 /* DriverHistoryTests.m */,
 			);
 			path = "Root-Evaluation-Tests";
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				7B6AFAD02366384B00C2FCF3 /* TripInfo.m in Sources */,
 				7B6AFAD3236639C400C2FCF3 /* TripInfoTests.m in Sources */,
+				7B6AFAD523663BF800C2FCF3 /* DriverHistoryTests.m in Sources */,
 				7B6AFACF2366384800C2FCF3 /* DriverInfo.m in Sources */,
 				7B6AFACE2366373000C2FCF3 /* DriverInfoTests.m in Sources */,
 				7B6AFAD12366384D00C2FCF3 /* DriverHistory.m in Sources */,
