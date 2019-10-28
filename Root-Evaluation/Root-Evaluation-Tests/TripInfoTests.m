@@ -43,6 +43,32 @@
     // just above 5 mph
     tripInfo = [[TripInfo alloc] initByParsingData:@"Trip Dan 07:15 08:15 5.1"];
     XCTAssertNotNil(tripInfo);
+}
+
+- (void)testValidTime
+{
+    // trues
+    XCTAssertTrue([TripInfo validTime:@"00:00"]);
+    XCTAssertTrue([TripInfo validTime:@"07:00"]);
+    XCTAssertTrue([TripInfo validTime:@"19:00"]);
+    XCTAssertTrue([TripInfo validTime:@"23:59"]);
+
+    // falses
+    XCTAssertFalse([TripInfo validTime:nil]);
+    XCTAssertFalse([TripInfo validTime:@""]);
+    XCTAssertFalse([TripInfo validTime:@"0700"]);
+    XCTAssertFalse([TripInfo validTime:@"07 00"]);
+    XCTAssertFalse([TripInfo validTime:@"24:00"]);
+    XCTAssertFalse([TripInfo validTime:@"204:00"]);
+    XCTAssertFalse([TripInfo validTime:@"20:0A"]);
+}
+
+- (void)testTimeToMinutes
+{
+    XCTAssert([TripInfo timeToMinutes:@"00:00"] == 0);
+    XCTAssert([TripInfo timeToMinutes:@"00:01"] == 1);
+    XCTAssert([TripInfo timeToMinutes:@"07:00"] == 420);
+    XCTAssert([TripInfo timeToMinutes:@"07:01"] == 421);
 
 }
 

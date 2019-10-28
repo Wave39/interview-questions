@@ -19,8 +19,13 @@
     return self;
 }
 
-+ (BOOL)validTime:(NSString *)timeString
++ (BOOL)validTime:(NSString * _Nullable)timeString
 {
+    if (timeString == nil)
+    {
+        return false;
+    }
+    
     NSString *timePattern = @"^(0[0-9]|1[0-9]|2[0-3]|[0-9]):[0-5][0-9]$";
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:timePattern options:0 error:nil];
     NSUInteger numberOfMatches = [regex numberOfMatchesInString:timeString options:0 range:NSMakeRange(0, [timeString length])];

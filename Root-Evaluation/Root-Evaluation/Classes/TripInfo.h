@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithName:(NSString *)driverName minutes:(NSInteger)minutes miles:(CGFloat)miles;
 - (instancetype)initByParsingData:(NSString *)line;
++ (BOOL)validTime:(NSString * _Nullable)timeString;
++ (NSInteger)timeToMinutes:(NSString *)timeString;
 
 @end
 
