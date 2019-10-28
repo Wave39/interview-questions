@@ -10,6 +10,7 @@
 
 #import "DriverHistory.h"
 #import "DriverInfo.h"
+#import "TripInfo.h"
 
 @interface DriverHistoryTests : XCTestCase
 
@@ -28,10 +29,20 @@
 - (void)tearDown {
 }
 
-- (void)testGeneral {
+- (void)testGeneral
+{
     XCTAssert([self.driverHistory.driverDictionary count] == 2);
     NSArray<DriverInfo *> *sortedArray = [self.driverHistory arraySortedByMilesDriven];
     XCTAssert([sortedArray[0].name isEqualToString:@"Slowpoke"]);
+}
+
+- (void)testAddTripInfo
+{
+    TripInfo *newTrip = [[TripInfo alloc] initWithName:@"Slowpoke" minutes:5 miles:1];
+    [self.driverHistory addTripInfo:newTrip];
+    DriverInfo *slowpoke = self.driverHistory.driverDictionary[@"Slowpoke"];
+    XCTAssert(slowpoke.minutesDriven == 65);
+    XCTAssert(roundf(slowpoke.milesDriven) == 3);
 }
 
 @end

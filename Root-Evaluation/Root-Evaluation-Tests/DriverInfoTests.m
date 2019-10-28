@@ -28,7 +28,8 @@
 - (void)tearDown {
 }
 
-- (void)testConsoleOutput {
+- (void)testConsoleOutput
+{
     XCTAssert([[self.speedy consoleOutput] isEqualToString:@"Speedy: 2 miles @ 120 mph"]);
     XCTAssert([[self.soccerMom consoleOutput] isEqualToString:@"Mom: 10 miles @ 60 mph"]);
     XCTAssert([[self.slowpoke consoleOutput] isEqualToString:@"Slowpoke: 1 mile @ 3 mph"]);

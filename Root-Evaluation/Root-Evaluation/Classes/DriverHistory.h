@@ -10,10 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class TripInfo;
+
 @interface DriverHistory : NSObject
 
 @property (nonatomic, strong) NSMutableDictionary *driverDictionary;
 
+- (void)addTripInfo:(TripInfo *)tripInfo;
 + (DriverHistory *)parseFromFile:(NSString *)filename;
 - (NSArray *)arraySortedByMilesDriven;
 - (void)outputSortedList;

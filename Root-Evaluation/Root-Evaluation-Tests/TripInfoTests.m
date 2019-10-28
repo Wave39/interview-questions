@@ -22,7 +22,8 @@
 - (void)tearDown {
 }
 
-- (void)testTripInfoParsing {
+- (void)testTripInfoParsing
+{
     TripInfo *tripInfo = [[TripInfo alloc] initByParsingData:@"Trip Dan 07:15 07:45 17.3"];
     XCTAssert([tripInfo.name isEqualToString:@"Dan"]);
     XCTAssert(roundf(tripInfo.milesDriven * 10) == 173); // multiply by 10 and take integer to eliminate floating point error
@@ -69,7 +70,6 @@
     XCTAssert([TripInfo timeToMinutes:@"00:01"] == 1);
     XCTAssert([TripInfo timeToMinutes:@"07:00"] == 420);
     XCTAssert([TripInfo timeToMinutes:@"07:01"] == 421);
-
 }
 
 @end
