@@ -48,13 +48,13 @@
 
 - (void)testValidTime
 {
-    // trues
+    // truths
     XCTAssertTrue([TripInfo validTime:@"00:00"]);
     XCTAssertTrue([TripInfo validTime:@"07:00"]);
     XCTAssertTrue([TripInfo validTime:@"19:00"]);
     XCTAssertTrue([TripInfo validTime:@"23:59"]);
 
-    // falses
+    // falsehoods
     XCTAssertFalse([TripInfo validTime:nil]);
     XCTAssertFalse([TripInfo validTime:@""]);
     XCTAssertFalse([TripInfo validTime:@"0700"]);
@@ -62,6 +62,7 @@
     XCTAssertFalse([TripInfo validTime:@"24:00"]);
     XCTAssertFalse([TripInfo validTime:@"204:00"]);
     XCTAssertFalse([TripInfo validTime:@"20:0A"]);
+    XCTAssertFalse([TripInfo validTime:@"7:00"]);
 }
 
 - (void)testTimeToMinutes
